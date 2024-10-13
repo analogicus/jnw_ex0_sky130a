@@ -2,7 +2,7 @@
 
 all: typical etc mc summary
 
-include ../../tech/make/sim.make
+
 
 TB=tran
 #VIEW=Sch
@@ -11,7 +11,7 @@ CELL=JNW_EX0
 LIB =JNW_EX0_SKY130A
 OPT=
 
-
+include ../../tech/make/sim.make
 
 test:
 	${MAKE} typical OPT="Debug"

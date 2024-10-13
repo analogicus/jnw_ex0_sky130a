@@ -738,7 +738,7 @@ cell: JNW_EX0
 author: Carsten Wulff
 tagline: The answer is 42
 email: carsten@wulff.no
-url: analogicus
+url: analogicus.github.io
 doc:
   libraries:
     JNW_EX0_SKY130A:
