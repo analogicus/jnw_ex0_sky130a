@@ -26,6 +26,7 @@ Have a look at the github pages
 
 
 # Signal interface
+
 | Signal   | Direction | Domain | Description |
 |:---------|:---------:|:------:|:------------|
 | VSS      | Input     | Ground |             |
@@ -35,6 +36,7 @@ Have a look at the github pages
 
 
 # Key parameters
+
 | Parameter   | Min | Typ             | Max | Unit |
 |:------------|:---:|:---------------:|:---:|:----:|
 | Technology  |     | Skywater 130 nm |     |      |
