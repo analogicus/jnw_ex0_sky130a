@@ -6,13 +6,15 @@
 [![SIM](../../actions/workflows/sim.yaml/badge.svg)](../../actions/workflows/sim.yaml)
 
 # Who
-wulff
+Carsten Wulff
 
 # Why
- <explain why you made this module>
+ 
+Example of an analog circuit, a current mirror
 
 # How
- <explain short how you made this module>
+
+Have a look at the github pages  
 
 
 # What
@@ -23,23 +25,18 @@ wulff
 | Layout          | design/JNW_EX0_SKY130A/JNW_EX0.mag |
 
 
-# Changelog/Plan
-| Version | Status | Comment|
-| :-| :-| :-|
-|0.1.0 | :x: | Make something |
-
-
 # Signal interface
-| Signal       | Direction | Domain  | Description                               |
-| :---         | :---:     | :---:   | :---                                      |
-| VDD_1V8         | Input     | VDD_1V8 | Main supply                               |
-| VSS         | Input     | Ground  |                                           |
-| PWRUP_1V8     | Input    | VDD_1V8 | Power up the circuit                       |
+| Signal   | Direction | Domain | Description |
+|:---------|:---------:|:------:|:------------|
+| VSS      | Input     | Ground |             |
+| IBPS_5U  | Input     |        |             |
+| IBNS_20U | Input     |        |             |
+
 
 
 # Key parameters
-| Parameter           | Min     | Typ           | Max     | Unit  |
-| :---                | :-:     | :-:           | :-:     | :---: |
-| Technology          |         | Skywater 130 nm |         |       |
-| AVDD                | 1.7    | 1.8           | 1.9    | V     |
-| Temperature         | -40     | 27            | 125     | C     |
+| Parameter   | Min | Typ             | Max | Unit |
+|:------------|:---:|:---------------:|:---:|:----:|
+| Technology  |     | Skywater 130 nm |     |      |
+| AVDD        | 1.7 | 1.8             | 1.9 | V    |
+| Temperature | -40 | 27              | 125 | C    |
