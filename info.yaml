@@ -1,5 +1,6 @@
 library: JNW_EX0_SKY130A
 cell: JNW_EX0
+github: analogicus
 author: Carsten Wulff
 tagline: The answer is 42
 email: carsten@wulff.no
