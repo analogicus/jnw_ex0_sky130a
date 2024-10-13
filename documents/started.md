@@ -81,8 +81,8 @@ contain standard cells and standard analog transistors (ATR) that you should be 
 
 ```
 ├── design
-│   ├── JNW_EX0_SKY130A
-│   │   └── JNW_EX0.sch
+│   ├── JNW_EX_SKY130A
+│   │   └── JNW_EX.sch
 │   ├── JNW_ATR_SKY130A -> ../../jnw_atr_sky130a/design/JNW_ATR_SKY130A
 │   └── JNW_TR_SKY130A -> ../../jnw_tr_sky130a/design/JNW_TR_SKY130A
 ```
@@ -174,7 +174,7 @@ analog circuit. The open source schematic editor we will use is XSchem.
 Open the schematic:
 
 ```bash
-xschem -b ../design/JNW_EX0_SKY130A/JNW_EX0.sch &
+xschem -b ../design/JNW_EX_SKY130A/JNW_EX.sch &
 ```
 
 ## Add Ports
@@ -215,7 +215,7 @@ Use 'f' to zoom full screen
 
 Remember to save the schematic
 
-![](media/JNW_EX0.svg)
+![](media/JNW_EX.svg)
 
 ## Netlist schematic
 
@@ -223,8 +223,8 @@ Check that the netlist looks OK
 
 In work/
 ``` bash
-make xsch CELL=JNW_EX0
-cat xsch/JNW_EX0.spice
+make xsch CELL=JNW_EX
+cat xsch/JNW_EX.spice
 ```
 
 ---
@@ -240,7 +240,7 @@ Navigate to the `jnw\_ex0\_sky130nm/sim/` directory.
 Make a new simulation folder
 
 ``` bash
-cicsim simcell  JNW_EX0_SKY130A JNW_EX0 ../tech/cicsim/cell_spice/template.yaml
+cicsim simcell  JNW_EX_SKY130A JNW_EX ../tech/cicsim/cell_spice/template.yaml
 ```
 
 I would recommend you have a look at simcell_template.yaml file to understand what happens.
@@ -264,7 +264,7 @@ reference, these are what the files are used for
 The default setup should run, so
 
 ``` bash
-cd JNW_EX0
+cd JNW_EX
 make typical
 ```
 
@@ -509,14 +509,14 @@ If you're lucky, the following might work (it automatically generates a layout
 from the schematic)
 
 ```bash
-cicpy mag JNW_EX0_SKY130A JNW_EX0
+cicpy mag JNW_EX_SKY130A JNW_EX
 ```
 
 Open Magic VLSI
 
 ``` bash
 cd work
-magic ../design/JNW_EX0_SKY130A/JNW_EX0.mag
+magic ../design/JNW_EX_SKY130A/JNW_EX.mag
 ```
 
 Now brace yourself, Magic VLSI was created in the 1980's. For it's time it was extremely modern,
@@ -649,14 +649,14 @@ make lpe
 Check the generated netlist
 
 ``` bash
-cat lpe/JNW_EX0_lpe.spi
+cat lpe/JNW_EX_lpe.spi
 ```
 
 ---
 
 # Simulate with layout parasitics <a name="simlpe"></a>
 
-Navigate to sim/JNW_EX0. We now want to simulate the layout.
+Navigate to sim/JNW_EX. We now want to simulate the layout.
 
 The default `tran.spi` should already have support for that.
 
@@ -681,7 +681,7 @@ make typical
 ```
 
 ## Corners
-Navigate to sim/JNW_EX0. Run all corners again
+Navigate to sim/JNW_EX. Run all corners again
 
 ``` bash
 make all
@@ -715,7 +715,7 @@ to the schematic simulation.
 
 # Make documentation 
 
-Make a file (or it may exists) `design/JNW_EX0_SKY130A/JNW_EX0.md` and add some
+Make a file (or it may exists) `design/JNW_EX_SKY130A/JNW_EX.md` and add some
 docs. 
 
 # Edit info.yaml 
@@ -733,18 +733,18 @@ I've added the doc section such that the workflows will generate the docs.
 The sim is to run a typical simulation. 
 
 ```
-library: JNW_EX0_SKY130A
-cell: JNW_EX0
+library: JNW_EX_SKY130A
+cell: JNW_EX
 author: Carsten Wulff
 tagline: The answer is 42
 email: carsten@wulff.no
 url: analogicus.github.io
 doc:
   libraries:
-    JNW_EX0_SKY130A:
-      - JNW_EX0
+    JNW_EX_SKY130A:
+      - JNW_EX
 sim:
-  JNW_EX0: make typical
+  JNW_EX: make typical
 
 ```
 
