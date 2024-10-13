@@ -3,6 +3,9 @@ layout: page
 title: Getting Started 
 ---
 
+* TOC
+{:toc }
+
 # Tools 
 
 You need the open source tools. There are many ways, see
@@ -745,8 +748,15 @@ doc:
       - JNW_EX
 sim:
   JNW_EX: make typical
-
 ```
+
+# Setup github pages 
+
+Go to github. Press Settings. Press Pages. Choose Build and Deployment  ->
+GitHub Actions
+
+Wait for the workflows to build. And check your github pages. Mine is [https://analogicus.github.io/jnw_ex0_sky130a/](https://analogicus.github.io/jnw_ex0_sky130a/)
+
 
 
 
