@@ -508,13 +508,6 @@ A foundry (the factory that makes integrated circuits) needs to know how we want
   the transistors we want.
 
 
-If you're lucky, the following might work (it automatically generates a layout
-from the schematic)
-
-```bash
-cicpy mag JNW_EX_SKY130A JNW_EX
-```
-
 Open Magic VLSI
 
 ``` bash
