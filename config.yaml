@@ -8,11 +8,11 @@ tech_sky130A:
   revision: main
 
 #- Standard cells
-jnw_tr_sky130A:
+jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130A.git
   revision: main
 
 #- Analog transistor library
-jnw_atr_sky130A:
+jnw_atr_sky130a:
   remote: git@github.com:analogicus/jnw_atr_sky130A.git
   revision: main
