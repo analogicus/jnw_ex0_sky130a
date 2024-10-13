@@ -1,14 +1,14 @@
 library: JNW_EX0_SKY130A
 cell: JNW_EX0
-author: Anonymous
+author: Carsten Wulff
 tagline: The answer is 42
-email: anon@anon.com
-url: anon.com
+email: carsten@wulff.no
+url: analogicus
 doc:
-  # Make docs
-  #libraries:
-  #   <library>:
-  #       - <cell>
-  #       - <cell>
+  libraries:
+    JNW_EX0_SKY130A:
+      - JNW_EX0
 sim:
+  JNW_EX0: make typical
+
   # <simdir>: command
